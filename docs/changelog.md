@@ -1,4 +1,6 @@
 # TBD
+
+# 0.2.0
 ### Breaking Changes
 * Rename `markdown_link_check_config_json` parameter to `check-docs` job to `markdown-link-check-config-json`
     * Users should update their job parameter appropriately
