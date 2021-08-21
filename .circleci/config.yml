@@ -19,7 +19,6 @@ workflows:
       # -- Artifact-publishing jobs --------------------------------
       - orb-tools/publish:
           context: circleci-orb-publisher
-          orb-path: orb.yml
           orb-ref: "kurtosis-tech/docs-checker@<<pipeline.git.tag>>"
           publish-token-variable: CIRCLECI_API_TOKEN
           filters:
