@@ -1,4 +1,6 @@
 # TBD
+### Removals
+* Remove debugging steps now that we figured out why publishing wasn't working
 
 # 0.1.10
 ### Fixes
