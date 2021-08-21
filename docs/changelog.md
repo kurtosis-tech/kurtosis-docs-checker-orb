@@ -1,5 +1,9 @@
 # TBD
 
+# 0.1.13
+### Fixes
+* Only check docs on PRs
+
 # 0.1.12
 ### Features
 * Have this orb validate its own docs
