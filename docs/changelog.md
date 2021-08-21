@@ -1,5 +1,8 @@
 # TBD
 
+# 0.1.9
+* Add missing `cli` orb needed for debugging job
+
 # 0.1.8
 * Fix forgotten executor in debugging job
 

@@ -3,6 +3,8 @@ version: 2.1
 orbs:
   # TODO This orb should use itself to check its own docs!
   orb-tools: circleci/orb-tools@10.0
+  # TODO DEBUGGING REMOVE
+  cli: circleci/circleci-cli@0.1.8
 
 jobs:
   debug:
