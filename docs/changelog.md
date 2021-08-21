@@ -1,5 +1,8 @@
 # TBD
 
+# 0.1.7
+* Add debugging to CircleCI to figure out why publishing still is failing
+
 # 0.1.6
 * Trying again to get publishing to work
 
