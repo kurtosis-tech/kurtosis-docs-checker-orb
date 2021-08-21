@@ -9,7 +9,12 @@ workflows:
   build:
     jobs:
       # -- End PR check jobs ---------------------------------------
-      - kurtosis-docs-checker/check-docs
+      - kurtosis-docs-checker/check-docs:
+          filters:
+            branches:
+              ignore:
+                - develop
+                - master
       - orb-tools/lint:
           filters:
             branches:

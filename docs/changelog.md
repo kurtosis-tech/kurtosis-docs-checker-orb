@@ -1,4 +1,6 @@
 # TBD
+### Fixes
+* Only check docs on PRs
 
 # 0.1.12
 ### Features
