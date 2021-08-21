@@ -1,5 +1,9 @@
 # TBD
 
+# 0.1.11
+### Removals
+* Remove debugging steps now that we figured out why publishing wasn't working
+
 # 0.1.10
 ### Fixes
 * Get rid of ridiculous .gitignore that was ignoring `orb.yml`!
