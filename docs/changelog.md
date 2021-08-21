@@ -1,4 +1,6 @@
 # TBD
+
+# 0.1.2
 ### Fixes
 * Trying again to fix the CircleCI publishing
 
