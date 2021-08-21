@@ -21,7 +21,7 @@ workflows:
           context: circleci-orb-publisher
           orb-path: orb.yml
           orb-ref: "kurtosis-tech/docs-checker@<<pipeline.git.tag>>"
-          token-variable: CIRCLECI_API_TOKEN
+          publish-token-variable: CIRCLECI_API_TOKEN
           filters:
             branches:
               ignore: /.*/
