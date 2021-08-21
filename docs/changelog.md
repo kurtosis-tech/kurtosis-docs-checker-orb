@@ -1,4 +1,6 @@
 # TBD
+
+# 0.1.3
 ### Fixes
 * Another bugfix in CircleCI publishing
 
