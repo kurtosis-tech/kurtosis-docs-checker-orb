@@ -4,16 +4,6 @@ orbs:
   # TODO This orb should use itself to check its own docs!
   orb-tools: circleci/orb-tools@10.0
 
-jobs:
-  publish:
-    docker:
-      - image: cimg/base:stable
-    steps:
-      - checkout
-      - orb-tools/publish:
-          orb-ref: "kurtosis-tech/docs-checker@<<pipeline.git.tag>>"
-          token-variable: CIRCLECI_API_TOKEN
-
 workflows:
   build:
     jobs:
@@ -27,8 +17,11 @@ workflows:
       # -- End PR check jobs ---------------------------------------
 
       # -- Artifact-publishing jobs --------------------------------
-      - publish:
+      - orb-tools/publish:
           context: circleci-orb-publisher
+          orb-path: orb.yml
+          orb-ref: "kurtosis-tech/docs-checker@<<pipeline.git.tag>>"
+          token-variable: CIRCLECI_API_TOKEN
           filters:
             branches:
               ignore: /.*/
