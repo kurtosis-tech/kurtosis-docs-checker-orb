@@ -3,7 +3,7 @@
 
 set -euo pipefail   # Bash "strict mode"
 script_dirpath="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
+root_dirpath="$(dirname "${script_dirpath}")"
 
 # ==================================================================================================
 #                                             Constants
@@ -15,7 +15,7 @@ RELEASE_SCRIPT_FILENAME="release-repo.sh"     # NOTE: Must be on the path; comes
 # ==================================================================================================
 #                                             Main Logic
 # ==================================================================================================
-if ! bash "${RELEASE_SCRIPT_FILENAME}"; then
+if ! bash "${RELEASE_SCRIPT_FILENAME}" "${root_dirpath}"; then
     echo "Error: Couldn't cut the release" >&2
     exit 1
 fi
