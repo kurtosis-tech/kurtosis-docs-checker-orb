@@ -1,4 +1,6 @@
 # TBD
+### Features
+* Have this orb validate its own docs
 
 # 0.1.11
 ### Removals
