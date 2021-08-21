@@ -6,6 +6,7 @@ orbs:
 
 jobs:
   debug:
+    executor: cli/default
     steps:
       - checkout
       - run: "pwd"
