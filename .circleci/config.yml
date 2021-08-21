@@ -1,0 +1,27 @@
+version: 2.1
+
+orbs:
+  # TODO This orb should use itself to check its own docs!
+  orb-tools: circleci/orb-tools@10.0
+
+workflows:
+  build:
+    jobs:
+      # -- End PR check jobs ---------------------------------------
+      - orb-tools/lint:
+          filters:
+            branches:
+              ignore:
+                - develop
+                - master
+      # -- End PR check jobs ---------------------------------------
+
+      # -- Artifact-publishing jobs --------------------------------
+      - orb-tools/publish:
+          orb-ref: "kurtosis-tech/docs-checker@<<pipeline.git.tag>>"
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^[0-9]+\.[0-9]+\.[0-9]+$/
+      # -- End artifact-publishing jobs ----------------------------
