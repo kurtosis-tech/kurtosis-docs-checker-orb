@@ -1,5 +1,9 @@
 # TBD
 
+# 0.1.5
+### Fixes
+* Correct for inconsistent docs in CircleCI orb-tools publishing
+
 # 0.1.4
 ### Fixes
 * Yet another bugfix in CircleCI publishing
