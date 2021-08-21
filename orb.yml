@@ -14,7 +14,7 @@ jobs:
       - image: cimg/node:15.3.0
     resource_class: small
     parameters:
-      markdown_link_check_config_json:
+      markdown-link-check-config-json:
         default: "{}"
         description: Config JSON passed to markdown-link-check package (see https://www.npmjs.com/package/markdown-link-check for full details)
         type: string
@@ -36,7 +36,7 @@ jobs:
             sudo npm install -g markdown-link-check
             config_filepath="$(mktemp)"
             cat \<< EOF > "${config_filepath}"
-            <<parameters.markdown_link_check_config_json>>
+            <<parameters.markdown-link-check-config-json>>
             EOF
 
             has_no_errors=true
