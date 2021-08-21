@@ -6,6 +6,8 @@ orbs:
 
 jobs:
   publish:
+    docker:
+      - image: cimg/base:stable
     steps:
       - checkout
       - orb-tools/publish:
