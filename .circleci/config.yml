@@ -1,13 +1,15 @@
 version: 2.1
 
 orbs:
-  # TODO This orb should use itself to check its own docs!
+  # This orb actually validates its own docs
+  kurtosis-docs-checker: kurtosis-tech/docs-checker@0.1.11
   orb-tools: circleci/orb-tools@10.0
 
 workflows:
   build:
     jobs:
       # -- End PR check jobs ---------------------------------------
+      - kurtosis-docs-checker/check-docs
       - orb-tools/lint:
           filters:
             branches:
