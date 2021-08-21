@@ -1,5 +1,9 @@
 # TBD
 
+# 0.1.10
+### Fixes
+* Get rid of ridiculous .gitignore that was ignoring `orb.yml`!
+
 # 0.1.9
 * Add missing `cli` orb needed for debugging job
 
