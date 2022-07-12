@@ -13,13 +13,11 @@ workflows:
           filters:
             branches:
               ignore:
-                - develop
                 - master
       - orb-tools/lint:
           filters:
             branches:
               ignore:
-                - develop
                 - master
       # -- End PR check jobs ---------------------------------------
 
