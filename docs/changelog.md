@@ -2,6 +2,7 @@
 
 ### Changes
 * Migrate repo to use new release workflow
+* Merge `develop` into `master`
 
 # 0.2.0
 ### Breaking Changes
