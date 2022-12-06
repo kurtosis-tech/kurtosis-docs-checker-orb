@@ -19,7 +19,7 @@ workflows:
             branches:
               ignore:
                 - master
-      - orb-tools/validate:
+      - orb-tools/review:
           filters:
             branches:
               ignore:
