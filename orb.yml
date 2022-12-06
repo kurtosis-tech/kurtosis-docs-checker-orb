@@ -30,7 +30,7 @@ jobs:
       # - Circle has no way of getting the PR base branch, so we have to hardcode master :( See: https://ideas.circleci.com/cloud-feature-requests/p/provide-env-variable-for-branch-name-targeted-by-pull-request
       # - The --exit-code flag to git-diff returns 0 on no changes, 1 on changes
       # - We have to use 'origin/master' rather than 'master' because Circle does a shallow checkout, and 'master' gets set to something weird and wrong that makes the check buggy
-      
+      # We put this behind a parameter to toggle whether we should run it
       - when:
         condition: <<parameters.should-check-changelog>>
         run:
