@@ -21,15 +21,6 @@ jobs:
     steps:
       - checkout
 
-      # Gotchas I discovered when writing this:
-      # - Without the '--no-pager' flag, Git will print "WARNING: Terminal is not fully functional" and not display any output
-      # - Circle has no way of getting the PR base branch, so we have to hardcode master :( See: https://ideas.circleci.com/cloud-feature-requests/p/provide-env-variable-for-branch-name-targeted-by-pull-request
-      # - The --exit-code flag to git-diff returns 0 on no changes, 1 on changes
-      # - We have to use 'origin/master' rather than 'master' because Circle does a shallow checkout, and 'master' gets set to something weird and wrong that makes the check buggy
-      - run:
-          name: Verify changelog was updated
-          command: "! git --no-pager diff --exit-code origin/master...HEAD docs/changelog.md"
-
       - run:
           name: Check links in Markdown docs
           command: |
