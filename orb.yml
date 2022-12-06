@@ -18,6 +18,10 @@ jobs:
         default: "{}"
         description: Config JSON passed to markdown-link-check package (see https://www.npmjs.com/package/markdown-link-check for full details)
         type: string
+      should-check-changelog:
+        default: true
+        description: Governs whether the changelog checker would run
+        type: boolean
     steps:
       - checkout
 
@@ -26,7 +30,10 @@ jobs:
       # - Circle has no way of getting the PR base branch, so we have to hardcode master :( See: https://ideas.circleci.com/cloud-feature-requests/p/provide-env-variable-for-branch-name-targeted-by-pull-request
       # - The --exit-code flag to git-diff returns 0 on no changes, 1 on changes
       # - We have to use 'origin/master' rather than 'master' because Circle does a shallow checkout, and 'master' gets set to something weird and wrong that makes the check buggy
-      - run:
+      # We put this behind a parameter to toggle whether we should run it
+      - when:
+        condition: <<parameters.should-check-changelog>>
+        run:
           name: Verify changelog was updated
           command: "! git --no-pager diff --exit-code origin/master...HEAD docs/changelog.md"
 
