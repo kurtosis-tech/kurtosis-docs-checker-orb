@@ -1,5 +1,7 @@
 # TBD
 
+# 0.2.2
+
 ###
 - The `docs-checker` can be toggled off, in order to support a repo with conventional commits & its related checker
 
