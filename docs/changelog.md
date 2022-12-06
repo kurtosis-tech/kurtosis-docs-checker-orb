@@ -1,5 +1,8 @@
 # TBD
 
+### Fixes
+- Fixed a bug that made the orb.yml invalid
+
 # 0.2.2
 
 ###
