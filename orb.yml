@@ -32,10 +32,9 @@ jobs:
       # - We have to use 'origin/master' rather than 'master' because Circle does a shallow checkout, and 'master' gets set to something weird and wrong that makes the check buggy
       # We put this behind a parameter to toggle whether we should run it
       - when:
-        condition: <<parameters.should-check-changelog>>
-        run:
-          name: Verify changelog was updated
-          command: "! git --no-pager diff --exit-code origin/master...HEAD docs/changelog.md"
+          condition: <<parameters.should-check-changelog>>
+          steps:
+            - run: "! git --no-pager diff --exit-code origin/master...HEAD docs/changelog.md"
 
       - run:
           name: Check links in Markdown docs
