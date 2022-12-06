@@ -20,7 +20,7 @@ jobs:
         type: string
       should-check-changelog:
         default: true
-        description: Governs whether the changelog checker would run, defaults to false
+        description: Governs whether the changelog checker would run
         type: boolean
     steps:
       - checkout
