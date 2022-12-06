@@ -19,6 +19,11 @@ workflows:
             branches:
               ignore:
                 - master
+      - orb-tools/validate:
+          filters:
+            branches:
+              ignore:
+                - master                
       # -- End PR check jobs ---------------------------------------
 
       # -- Artifact-publishing jobs --------------------------------
