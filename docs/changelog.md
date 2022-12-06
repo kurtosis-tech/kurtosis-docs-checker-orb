@@ -1,5 +1,9 @@
 # TBD
 
+###
+- The `docs-checker` will only check for missing links now, as the check
+for CHANGELOG will happen via a different checker that checks for conventional commits.
+
 # 0.2.1
 
 ### Changes
