@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   # This orb actually validates its own docs
-  kurtosis-docs-checker: kurtosis-tech/docs-checker@0.1.11
+  kurtosis-docs-checker: kurtosis-tech/docs-checker@0.2.3
   orb-tools: circleci/orb-tools@10.0
 
 workflows:
@@ -10,6 +10,7 @@ workflows:
     jobs:
       # -- End PR check jobs ---------------------------------------
       - kurtosis-docs-checker/check-docs:
+          should-check-changelog: false
           filters:
             branches:
               ignore:
