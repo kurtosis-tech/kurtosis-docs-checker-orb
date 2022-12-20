@@ -10,6 +10,14 @@ workflows:
     jobs:
       # -- End PR check jobs ---------------------------------------
       - kurtosis-docs-checker/check-docs:
+          markdown-link-check-config-json: |
+            {
+                "ignorePatterns": [
+                    {
+                        "pattern": "https://github.com/kurtosis-tech/kurtosis-docs-checker-orb"
+                    }
+                ]
+            }
           should-check-changelog: false
           filters:
             branches:
