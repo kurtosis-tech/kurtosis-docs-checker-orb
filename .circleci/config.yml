@@ -22,12 +22,12 @@ workflows:
           filters:
             branches:
               ignore:
-                - master
+                - main
       - orb-tools/lint:
           filters:
             branches:
               ignore:
-                - master
+                - main
       # -- End PR check jobs ---------------------------------------
 
       # -- Artifact-publishing jobs --------------------------------
