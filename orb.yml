@@ -26,7 +26,6 @@ jobs:
         default: ""
         description: Governw whether we should skip some dirs in the link checker
         type: string
-      
     steps:
       - checkout
 
