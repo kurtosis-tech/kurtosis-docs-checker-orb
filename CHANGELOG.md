@@ -1,71 +1,80 @@
-# 0.2.3
+# Changelog
+
+## [0.2.4](https://github.com/kurtosis-tech/kurtosis-docs-checker-orb/compare/0.2.3...0.2.4) (2023-03-10)
+
+
+### Features
+
+* add ability to exclude dirs ([#14](https://github.com/kurtosis-tech/kurtosis-docs-checker-orb/issues/14)) ([a6964b5](https://github.com/kurtosis-tech/kurtosis-docs-checker-orb/commit/a6964b5f494c37c7169bb5410b15dffec883d89d))
+
+## 0.2.3
 
 ### Fixes
 - Fixed a bug that made the orb.yml invalid
 
-# 0.2.2
+## 0.2.2
 
 ###
 - The `docs-checker` can be toggled off, in order to support a repo with conventional commits & its related checker
 
-# 0.2.1
+## 0.2.1
 
 ### Changes
 * Migrate repo to use new release workflow
 * Merge `develop` into `master`
 
-# 0.2.0
+## 0.2.0
 ### Breaking Changes
 * Rename `markdown_link_check_config_json` parameter to `check-docs` job to `markdown-link-check-config-json`
     * Users should update their job parameter appropriately
 
-# 0.1.13
+## 0.1.13
 ### Fixes
 * Only check docs on PRs
 
-# 0.1.12
+## 0.1.12
 ### Features
 * Have this orb validate its own docs
 
-# 0.1.11
+## 0.1.11
 ### Removals
 * Remove debugging steps now that we figured out why publishing wasn't working
 
-# 0.1.10
+## 0.1.10
 ### Fixes
 * Get rid of ridiculous .gitignore that was ignoring `orb.yml`!
 
-# 0.1.9
+## 0.1.9
 * Add missing `cli` orb needed for debugging job
 
-# 0.1.8
+## 0.1.8
 * Fix forgotten executor in debugging job
 
-# 0.1.7
+## 0.1.7
 * Add debugging to CircleCI to figure out why publishing still is failing
 
-# 0.1.6
+## 0.1.6
 * Trying again to get publishing to work
 
-# 0.1.5
+## 0.1.5
 ### Fixes
 * Correct for inconsistent docs in CircleCI orb-tools publishing
 
-# 0.1.4
+## 0.1.4
 ### Fixes
 * Yet another bugfix in CircleCI publishing
 
-# 0.1.3
+## 0.1.3
 ### Fixes
 * Another bugfix in CircleCI publishing
 
-# 0.1.2
+## 0.1.2
 ### Fixes
 * Trying again to fix the CircleCI publishing
 
-# 0.1.1
+## 0.1.1
 ### Fixes
 * Fixed CircleCI config.yml errors
 
-# 0.1.0
+## 0.1.0
 * Initial commit
