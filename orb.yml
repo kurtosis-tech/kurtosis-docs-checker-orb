@@ -43,6 +43,8 @@ jobs:
       - run:
           name: Check links in Markdown docs
           command: |
+            set -eou pipefail
+
             sudo npm install -g markdown-link-check
             config_filepath="$(mktemp)"
             cat \<< EOF > "${config_filepath}"
