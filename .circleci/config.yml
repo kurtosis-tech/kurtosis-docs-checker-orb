@@ -5,52 +5,9 @@ orbs:
   kurtosis-docs-checker: kurtosis-tech/docs-checker@0.2.3
   orb-tools: circleci/orb-tools@10.0
 
-parameters:
-  dir-to-exclude:
-    type: string
-    default: ""
-
-jobs:
-  check-docs-local:
-    docker:
-      - image: cimg/node:15.3.0    
-    resource_class: small
-    steps:
-      - checkout
-
-      - run:
-          name: Check links in Markdown docs
-          command: |
-            set -eou pipefail
-
-            sudo npm install -g markdown-link-check
-            config_filepath="$(mktemp)"
-            cat \<< EOF > "${config_filepath}"
-            EOF
-
-            # this is intentionally not in quotes so that we don't make all of the files in one line
-            all_files=$(find . -iname '*.md' -not -path <<pipeline.parameters.dir-to-exclude>> | sort)
-
-            has_no_errors=true
-            # Inspired by https://github.com/open-telemetry/opentelemetry-collector/pull/1156/files/2244e61f4dd0378deffc00d939edf6f800687dcf
-            # the $all_files intentionally not in quotes so that we don't make all of the files in one line
-            for filepath in $all_files ; do
-                markdown-link-check --config "${config_filepath}" -qv "${filepath}" || has_no_errors=false
-                # Wait to scan files so that we don't overload github with requests which may result in 429 responses
-                sleep 2
-            done
-
-            "${has_no_errors}"
-
-
 workflows:
   build:
     jobs:
-      - check-docs-local:
-          filters:
-            branches:
-              ignore:
-                - main
       # -- End PR check jobs ---------------------------------------
       - kurtosis-docs-checker/check-docs:
           markdown-link-check-config-json: |
