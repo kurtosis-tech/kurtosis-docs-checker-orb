@@ -5,6 +5,34 @@ orbs:
   kurtosis-docs-checker: kurtosis-tech/docs-checker@0.2.3
   orb-tools: circleci/orb-tools@10.0
 
+parameters:
+  dir-to-exclude:
+    type: string
+    default: ""
+
+jobs:
+  check-docs-local:
+    steps:
+      - checkout
+
+      - run:
+          name: Check links in Markdown docs
+          command: |
+            sudo npm install -g markdown-link-check
+            config_filepath="$(mktemp)"
+            cat \<< EOF > "${config_filepath}"
+            EOF
+
+            has_no_errors=true
+            # Inspired by https://github.com/open-telemetry/opentelemetry-collector/pull/1156/files/2244e61f4dd0378deffc00d939edf6f800687dcf
+            for filepath in $(find . -iname '*.md' -not -path "<<parameters.dir-to-exclude>>" | sort); do
+                markdown-link-check --config "${config_filepath}" -qv "${filepath}" || has_no_errors=false
+                # Wait to scan files so that we don't overload github with requests which may result in 429 responses
+                sleep 2
+            done
+
+            "${has_no_errors}"
+
 workflows:
   build:
     jobs:
