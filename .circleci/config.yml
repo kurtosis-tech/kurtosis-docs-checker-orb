@@ -28,7 +28,7 @@ jobs:
             cat \<< EOF > "${config_filepath}"
             EOF
 
-            all_files="$(find . -iname '*.md' -not -path <<parameters.dir-to-exclude>> | sort)"
+            all_files="$(find . -iname '*.md' -not -path <<pipeline.parameters.dir-to-exclude>> | sort)"
 
             has_no_errors=true
             # Inspired by https://github.com/open-telemetry/opentelemetry-collector/pull/1156/files/2244e61f4dd0378deffc00d939edf6f800687dcf
