@@ -39,6 +39,11 @@ jobs:
 workflows:
   build:
     jobs:
+      - check-docs-local:
+          filters:
+            branches:
+              ignore:
+                - main
       # -- End PR check jobs ---------------------------------------
       - kurtosis-docs-checker/check-docs:
           markdown-link-check-config-json: |
