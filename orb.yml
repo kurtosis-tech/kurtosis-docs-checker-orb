@@ -51,10 +51,13 @@ jobs:
             <<parameters.markdown-link-check-config-json>>
             EOF
 
+            # we take out the files in a variable so that set -euo pipefail works
+            # we also don't put this in quotes otherwise we get a single line instead of multiple lines with each line being a valid file
             all_files=$(find . -iname '*.md' -not -path "<<parameters.dir-to-exclude>>" | sort)
 
             has_no_errors=true
             # Inspired by https://github.com/open-telemetry/opentelemetry-collector/pull/1156/files/2244e61f4dd0378deffc00d939edf6f800687dcf
+            # the $all_files is intentionally not quoted as we want to keep new line information
             for filepath in $all_files ; do
                 markdown-link-check --config "${config_filepath}" -qv "${filepath}" || has_no_errors=false
                 # Wait to scan files so that we don't overload github with requests which may result in 429 responses
