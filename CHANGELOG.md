@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.5](https://github.com/kurtosis-tech/kurtosis-docs-checker-orb/compare/0.2.4...0.2.5) (2023-04-03)
+
+
+### Bug Fixes
+
+* allow for the docs checker parameter to be empty ([#17](https://github.com/kurtosis-tech/kurtosis-docs-checker-orb/issues/17)) ([8f87ed9](https://github.com/kurtosis-tech/kurtosis-docs-checker-orb/commit/8f87ed935c2434246742361201f50516783d3c0e))
+
 ## [0.2.4](https://github.com/kurtosis-tech/kurtosis-docs-checker-orb/compare/0.2.3...0.2.4) (2023-03-10)
 
 
