@@ -51,11 +51,11 @@ jobs:
             <<parameters.markdown-link-check-config-json>>
             EOF
 
-            all_files="$(find . -iname '*.md' -not -path "<<parameters.dir-to-exclude>>" | sort)"
+            all_files=$(find . -iname '*.md' -not -path "<<parameters.dir-to-exclude>>" | sort)
 
             has_no_errors=true
             # Inspired by https://github.com/open-telemetry/opentelemetry-collector/pull/1156/files/2244e61f4dd0378deffc00d939edf6f800687dcf
-            for filepath in "$all_files" ; do
+            for filepath in $all_files ; do
                 markdown-link-check --config "${config_filepath}" -qv "${filepath}" || has_no_errors=false
                 # Wait to scan files so that we don't overload github with requests which may result in 429 responses
                 sleep 2
