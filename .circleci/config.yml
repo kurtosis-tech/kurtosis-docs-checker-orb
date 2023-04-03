@@ -20,7 +20,7 @@ workflows:
             }
           should-check-changelog: false
           # using our inbuilt ignore while https://github.com/tcort/markdown-link-check/issues/246 stays open
-          dirs-to-exclude: 'CHANGELOG.md'
+          dir-to-exclude: 'CHANGELOG.md'
           filters:
             branches:
               ignore:
