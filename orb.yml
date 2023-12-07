@@ -24,7 +24,7 @@ jobs:
         type: boolean
       dir-to-exclude:
         default: ""
-        description: Governw whether we should skip some dirs in the link checker
+        description: Governs whether we should skip some dirs in the link checker
         type: string
     steps:
       - checkout
@@ -53,7 +53,12 @@ jobs:
 
             # we take out the files in a variable so that set -euo pipefail works
             # we also don't put this in quotes otherwise we get a single line instead of multiple lines with each line being a valid file
-            all_files=$(find . -iname '*.md' -not -path "<<parameters.dir-to-exclude>>" | sort)
+            REGEX_EXCLUDE_FILTER="<<parameters.dir-to-exclude>>"
+            if [ -z "${REGEX_EXCLUDE_FILTER}" ]; then
+              all_files=$(find . -iname '*.md' | sort)
+            else
+              all_files=$(find . -iname '*.md' | egrep -v "$REGEX_EXCLUDE_FILTER" | sort)
+            fi
 
             has_no_errors=true
             # Inspired by https://github.com/open-telemetry/opentelemetry-collector/pull/1156/files/2244e61f4dd0378deffc00d939edf6f800687dcf
