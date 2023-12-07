@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   # This orb actually validates its own docs
-  kurtosis-docs-checker: kurtosis-tech/docs-checker@0.2.4
+  kurtosis-docs-checker: kurtosis-tech/docs-checker@0.2.5
   orb-tools: circleci/orb-tools@10.0
 
 workflows:
