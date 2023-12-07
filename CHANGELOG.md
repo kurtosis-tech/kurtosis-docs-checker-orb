@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.6](https://github.com/kurtosis-tech/kurtosis-docs-checker-orb/compare/0.2.5...0.2.6) (2023-12-07)
+
+
+### Features
+
+* Allow regex to exclude multiple paths ([#19](https://github.com/kurtosis-tech/kurtosis-docs-checker-orb/issues/19)) ([51e1ad7](https://github.com/kurtosis-tech/kurtosis-docs-checker-orb/commit/51e1ad7574b1d4c09d251441d4e9f2e86ccb66a7))
+
 ## [0.2.5](https://github.com/kurtosis-tech/kurtosis-docs-checker-orb/compare/0.2.4...0.2.5) (2023-04-03)
 
 
