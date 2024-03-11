@@ -8,29 +8,29 @@ orbs:
 workflows:
   build:
     jobs:
-      # # -- End PR check jobs ---------------------------------------
-      # - kurtosis-docs-checker/check-docs:
-      #     markdown-link-check-config-json: |
-      #       {
-      #           "ignorePatterns": [
-      #               {
-      #                   "pattern": "https://github.com/kurtosis-tech/kurtosis-docs-checker-orb"
-      #               }
-      #           ]
-      #       }
-      #     should-check-changelog: false
-      #     # using our inbuilt ignore while https://github.com/tcort/markdown-link-check/issues/246 stays open
-      #     dir-to-exclude: './CHANGELOG.md'
-      #     filters:
-      #       branches:
-      #         ignore:
-      #           - main
-      # - orb-tools/lint:
-      #     filters:
-      #       branches:
-      #         ignore:
-      #           - main
-      # # -- End PR check jobs ---------------------------------------
+      # -- End PR check jobs ---------------------------------------
+      - kurtosis-docs-checker/check-docs:
+          markdown-link-check-config-json: |
+            {
+                "ignorePatterns": [
+                    {
+                        "pattern": "https://github.com/kurtosis-tech/kurtosis-docs-checker-orb"
+                    }
+                ]
+            }
+          should-check-changelog: false
+          # using our inbuilt ignore while https://github.com/tcort/markdown-link-check/issues/246 stays open
+          dir-to-exclude: './CHANGELOG.md'
+          filters:
+            branches:
+              ignore:
+                - main
+      - orb-tools/lint:
+          filters:
+            branches:
+              ignore:
+                - main
+      # -- End PR check jobs ---------------------------------------
 
       # -- Artifact-publishing jobs --------------------------------
       - orb-tools/publish:
