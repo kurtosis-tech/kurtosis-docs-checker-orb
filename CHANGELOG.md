@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.7](https://github.com/kurtosis-tech/kurtosis-docs-checker-orb/compare/0.2.6...0.2.7) (2024-03-11)
+
+
+### Bug Fixes
+
+* use 3.11.2 as latest is broken ([#21](https://github.com/kurtosis-tech/kurtosis-docs-checker-orb/issues/21)) ([f994acb](https://github.com/kurtosis-tech/kurtosis-docs-checker-orb/commit/f994acb5f1eea92a10909f00d23bcddeb1f6bfbb))
+
 ## [0.2.6](https://github.com/kurtosis-tech/kurtosis-docs-checker-orb/compare/0.2.5...0.2.6) (2023-12-07)
 
 
