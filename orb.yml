@@ -11,7 +11,7 @@ display:
 jobs:
   check-docs:
     docker:
-      - image: cimg/node:15.3.0
+      - image: cimg/node:18.20.0
     resource_class: small
     parameters:
       markdown-link-check-config-json:
