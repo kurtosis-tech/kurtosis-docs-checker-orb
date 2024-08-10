@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.9](https://github.com/kurtosis-tech/kurtosis-docs-checker-orb/compare/0.2.8...0.2.9) (2024-08-10)
+
+
+### Bug Fixes
+
+* upgrade node img ([#25](https://github.com/kurtosis-tech/kurtosis-docs-checker-orb/issues/25)) ([5e7265e](https://github.com/kurtosis-tech/kurtosis-docs-checker-orb/commit/5e7265e48357a9b8f3b06d06b1d5ecce7ba3e247))
+
 ## [0.2.8](https://github.com/kurtosis-tech/kurtosis-docs-checker-orb/compare/0.2.7...0.2.8) (2024-08-10)
 
 
