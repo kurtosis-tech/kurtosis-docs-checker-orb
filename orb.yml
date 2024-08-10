@@ -45,8 +45,6 @@ jobs:
           command: |
             set -eou pipefail
 
-            rm -rf node_modules
-            rm -f package-lock.json
             sudo npm cache clean --force
             sudo npm install -g markdown-link-check@3.11.2
             config_filepath="$(mktemp)"
