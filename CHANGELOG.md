@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.8](https://github.com/kurtosis-tech/kurtosis-docs-checker-orb/compare/0.2.7...0.2.8) (2024-08-10)
+
+
+### Bug Fixes
+
+* clean cache before installing ([#23](https://github.com/kurtosis-tech/kurtosis-docs-checker-orb/issues/23)) ([f8ef471](https://github.com/kurtosis-tech/kurtosis-docs-checker-orb/commit/f8ef4714627fbb10088398b9308ff1775ddc396d))
+
 ## [0.2.7](https://github.com/kurtosis-tech/kurtosis-docs-checker-orb/compare/0.2.6...0.2.7) (2024-03-11)
 
 
