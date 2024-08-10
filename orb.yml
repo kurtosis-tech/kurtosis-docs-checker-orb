@@ -45,6 +45,7 @@ jobs:
           command: |
             set -eou pipefail
 
+            sudo npm cache clean --force
             sudo npm install -g markdown-link-check@3.11.2
             config_filepath="$(mktemp)"
             cat \<< EOF > "${config_filepath}"
