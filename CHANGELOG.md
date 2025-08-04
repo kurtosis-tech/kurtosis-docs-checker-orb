@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.10](https://github.com/kurtosis-tech/kurtosis-docs-checker-orb/compare/0.2.9...0.2.10) (2025-08-04)
+
+
+### Bug Fixes
+
+* give pr update workflow explicit perms ([#28](https://github.com/kurtosis-tech/kurtosis-docs-checker-orb/issues/28)) ([28f2702](https://github.com/kurtosis-tech/kurtosis-docs-checker-orb/commit/28f2702932fc1383b768e57a5fa12494b99ac634))
+
 ## [0.2.9](https://github.com/kurtosis-tech/kurtosis-docs-checker-orb/compare/0.2.8...0.2.9) (2024-08-10)
 
 
