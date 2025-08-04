@@ -71,4 +71,3 @@ jobs:
             done
 
             "${has_no_errors}"
-
