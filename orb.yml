@@ -11,7 +11,7 @@ display:
 jobs:
   check-docs:
     docker:
-      - image: cimg/node:18.20.0
+      - image: cimg/node:22.7.0
     resource_class: small
     parameters:
       markdown-link-check-config-json:
@@ -46,7 +46,7 @@ jobs:
             set -eou pipefail
 
             sudo npm cache clean --force
-            sudo npm install -g markdown-link-check@3.11.2
+            sudo npm install -g markdown-link-check@3.12.2
             config_filepath="$(mktemp)"
             cat \<< EOF > "${config_filepath}"
             <<parameters.markdown-link-check-config-json>>
